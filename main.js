@@ -27,8 +27,7 @@ btn.addEventListener('click', () => {
         box.style.backgroundColor = colorPicker.value;
     }
 
-    
-    box.style.border = '1px solid black';
+     
 });
 
 btn1.addEventListener('click', () => {
