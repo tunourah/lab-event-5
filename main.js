@@ -1,17 +1,26 @@
-
-const width  = document.getElementById('input');
+const width = document.getElementById('input');
 const height = document.getElementById('input1');
-const btn    = document.getElementById('btn');
-const border = document.getElementById('input2');
-const clear = document.getElementById('clear');
+const borderRadius = document.getElementById('input2');
+const btn = document.getElementById('btn');
+const btn1 = document.getElementById('btn1');
+const box = document.getElementById('box');
 
 btn.addEventListener('click', () => {
-    const div = document.createElement('div');
-    div.style.width = width.value + 'px';
-    div.style.color = 'blue';
+    if (width.value) {
+        box.style.width = width.value.includes('%') || width.value.includes('px') ? width.value : width.value + 'px';
+    }
+    if (height.value) {
+        box.style.height = height.value.includes('%') || height.value.includes('px') ? height.value : height.value + 'px';
+    }
+    if (borderRadius.value) {
+        box.style.borderRadius = borderRadius.value + 'px';
+    }
+});
+
+btn1.addEventListener('click', () => {
     
-    div.style.height = height.value + 'px';
-    div.style.border = border.value + 'px solid black';
-    document.body.appendChild(div);
-} );
- 
+    box.style.width = '30%';
+    box.style.height = '40%';
+    box.style.backgroundColor = 'blue';
+    box.style.borderRadius = '0px';
+});
