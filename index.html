@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Box Customization</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box-style {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        #box {
+            width: 30%;
+            height: 40%;
+            background-color: blue;
+            border-radius: 0;
+            border: 1px solid black;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
 <div class="box-style">
@@ -13,12 +37,13 @@
     <input type="text" id="input2" placeholder="Enter border-radius (in px)">
     <input type="color" id="input3" value="#0000FF" placeholder="Choose color"> 
 </div>
-<div style=" align-items: center;">
+
+<div style="display: flex; justify-content: center;">
     <button id="btn">Draw</button>
     <button id="btn1">Clear</button>
 </div>
 
-<div id="box" style="width: 30%; height: 40%; background-color: blue; border-radius: 0px;"></div>
+<div id="box"></div>
 
 <script src="main.js"></script>
 </body>
